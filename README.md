@@ -34,10 +34,10 @@ Control de acceso por roles y registro de operaciones para papelerías y miscel�
 ## Evidencias e imágenes del sistema
 
 ### Interfaz general de inventario
-![Interfaz de StockControl](interfaz.png)
+![Interfaz de StockControl](img/interfaz.png)
 
 ### Celdas de creación de productos
-![Celdas de creación de producto](celdas.png)
+![Celdas de creación de producto](img/celdas.png)
 
 ### Validación de campos obligatorios
-![Error al dejar campo vacío](error.png)
+![Error al dejar campo vacío](img/error.png)
