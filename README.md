@@ -20,3 +20,24 @@ Aplicación web para la gestión de inventario y control de acceso por roles en 
 2. Iniciar **Apache** y **MySQL** desde el panel de control de **XAMPP**.
 3. Verificar que exista la base de datos `stockcontrol_db` con sus tablas (`usuarios`, `productos`, `ventas`, `detalle_ventas`) en phpMyAdmin.
 4. Abrir en el navegador: `http://localhost/StockControl/login.php`.
+
+Control de acceso por roles y registro de operaciones para papelerías y misceláneas locales[cite: 14, 20]. Permite digitalizar el control de existencias para evitar mermas, desabastecimiento de artículos de alta rotación y errores en registros manuales[cite: 14].
+
+## Lo que se realizó en el proyecto
+- **Base de datos relacional (`stockcontrol_db` / `stockcontrol`):** Modelado con motor `InnoDB` y cotejamiento `utf8mb4_general_ci` mediante las tablas `usuarios`, `productos`, `ventas` y `detalle_ventas`[cite: 7, 15].
+- **Conexión segura (`conexion.php`):** Enlace a MySQL en XAMPP utilizando `MySQLi`, manejo de errores de conexión y codificación `utf8mb4`.
+- **Autenticación y control de sesiones (`login.php` y `logout.php`):** Validación de credenciales con consultas preparadas (`prepare` y `bind_param`), control de sesión activa con `$_SESSION` y cierre de sesión limpio[cite: 20].
+- **Control de roles (`admin` vs. `empleado`):** Restricción y visualización diferenciada según el rol del usuario autenticado (como la vista del precio de compra en el inventario)[cite: 20].
+- **Gestión de inventario (`productos.php`):** Alta de productos (código de barras, nombre, categoría, stock inicial, stock mínimo, precio de compra y precio de venta), validación de campos obligatorios, tabla de inventario actual e indicadores visuales cuando el stock es menor o igual al stock mínimo[cite: 16, 17, 20].
+- **Arquitectura académica y despliegue:** Documentación técnica de la estructura modular (`conexion`, `controller`, `dao`, `model`), configuración en entorno local y control de versiones con Git y GitHub en el repositorio `ElNovaX/StockControl`[cite: 10, 15, 18].
+
+## Evidencias e imágenes del sistema
+
+### Interfaz general de inventario
+![Interfaz de StockControl](interfaz.png)
+
+### Celdas de creación de productos
+![Celdas de creación de producto](celdas.png)
+
+### Validación de campos obligatorios
+![Error al dejar campo vacío](error.png)
