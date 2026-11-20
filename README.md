@@ -21,9 +21,7 @@ Aplicación web para la gestión de inventario y control de acceso por roles en 
 3. Verificar que exista la base de datos `stockcontrol_db` con sus tablas (`usuarios`, `productos`, `ventas`, `detalle_ventas`) en phpMyAdmin.
 4. Abrir en el navegador: `http://localhost/StockControl/login.php`.
 
-# StockControl — Sistema de Control de Inventario y Ventas para Papelería
-
-Aplicación web orientada a la gestión de inventario, control de acceso por roles y registro de operaciones para papelerías y misceláneas locales[cite: 14, 20]. Permite digitalizar el control de existencias para evitar mermas, desabastecimiento de artículos de alta rotación y errores en registros manuales[cite: 14].
+Control de acceso por roles y registro de operaciones para papelerías y misceláneas locales[cite: 14, 20]. Permite digitalizar el control de existencias para evitar mermas, desabastecimiento de artículos de alta rotación y errores en registros manuales[cite: 14].
 
 ## Lo que se realizó en el proyecto
 - **Base de datos relacional (`stockcontrol_db` / `stockcontrol`):** Modelado con motor `InnoDB` y cotejamiento `utf8mb4_general_ci` mediante las tablas `usuarios`, `productos`, `ventas` y `detalle_ventas`[cite: 7, 15].
@@ -39,7 +37,7 @@ Aplicación web orientada a la gestión de inventario, control de acceso por rol
 ![Interfaz de StockControl](interfaz.png)
 
 ### Celdas de creación de productos
-![Celdas de creación de producto](celdas%20de%20creacion.png)
+![Celdas de creación de producto](celdas.png)
 
 ### Validación de campos obligatorios
 ![Error al dejar campo vacío](error.png)
